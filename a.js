@@ -29,7 +29,7 @@ function err(t){
 
 function addItem(){
   var v = $("what").value.trim();
-  if(!v){ err("צריך למלא מספר הזמנה או תיאוע."); $("what").focus(); return; }
+  if(!v){ err("צריך למלא מספר הזמנה או תיאור."); $("what").focus(); return; }
   items.push({
     value: v,
     qty:   parseInt($("qty").value,10) || 1,

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>הצהרת משלוח · Kasba → MIRIAM</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Archivo:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="s1.css"><link rel="stylesheet" href="s2.css">
+</head>
+<body>
+<noscript><div class="ns">כדי למלא את הטופס יש לפתוח את הקישור בדפדפן של הטלפון (Chrome / Safari).</div></noscript>
+<div class="head">
+<div class="logo-text"><span class="l1">MIRIAM</span><span class="l2">House of Design</span></div>
+<h1>הצהרת משלוח שבועי</h1>
+<div class="sup">Kasba</div>
+</div>
+<div id="app">
+<div class="wrap">
+<div class="card">
+<div class="grid2">
+<div>
+<label for="date">תאריך המשלוח</label>
+<input type="date" id="date">
+</div>
+<div>
+<label for="boxes">כמה ארגזים סה״כ</label>
+<input type="number" id="boxes" min="0" step="1" inputmode="numeric" placeholder="למשל 4">
+</div>
+</div>
+</div>
+<div class="entry">
+<div class="lbl">הוספת פריט</div>
+<input type="text" id="what" placeholder="מספר הזמנה — למשל 1250" autocomplete="off" enterkeyhint="done">
+<div class="qtyrow">
+<span class="t">כמות</span>
+<div class="stepper">
+<button type="button" id="minus" aria-label="פחות">−</button>
+<input type="number" id="qty" value="1" min="1" step="1" inputmode="numeric">
+<button type="button" id="plus" aria-label="עוד">+</button>
+</div>
+</div>
+<button type="button" class="more" id="moreBtn">+ ארגז והערה</button>
+<div class="extra" id="extra">
+<input type="text" id="box" placeholder="ארגז / שקית" autocomplete="off">
+<input type="text" id="note" placeholder="הערה לפריט" autocomplete="off">
+</div>
+<button type="button" class="addbtn" id="add">הוספה לרשימה</button>
+</div>
+<div id="msg" class="msg"></div>
+<div class="listhead">
+<h2>הרשימה</h2>
+<span id="cnt">אין פריטים עדיין</span>
+</div>
+<div class="list" id="list"></div>
+<div class="empty" id="empty">הפריטים שתוסיפו יופיעו כאן, ותוכלו לבדוק אותם לפני השליחה.</div>
+<div class="card" style="margin-top:20px">
+<h2>צילום תעודת משלוח</h2>
+<div class="hint">אופציונלי.</div>
+<label class="filebox" for="photo"><span>📷 צילום או בחירת תמונה</span>
+<input type="file" id="photo" accept="image/*" multiple></label>
+<div class="thumbs" id="thumbs"></div>
+</div>
+<div class="card">
+<h2>הערות</h2>
+<div class="hint">משהו שחשוב שנדע? הזמנה שנשארה, בעיה בבד.</div>
+<textarea id="notes" placeholder="לדוגמה: הזמנה 1260 תישלח בשבוע הבא."></textarea>
+</div>
+<div class="foot">MIRIAM House of Design · הצהרת משלוח פנימית</div>
+</div>
+</div>
+<div class="done" id="done">
+<div class="tick">✓</div>
+<h2>קיבלנו, תודה</h2>
+<p>ההצהרה נקלטה במערכת של MIRIAM. אם משהו במספרים לא יזוהה — נחזור אליכם.</p>
+<button type="button" onclick="location.reload()">שליחת הצהרה נוספת</button>
+</div>
+<div class="bar" id="bar">
+<div class="bar-in">
+<div class="totals"><b id="tItems">0</b> פריטים<br><span id="tLines">0 שורות</span></div>
+<button type="button" class="go" id="review" disabled>סיכום ושליחה</button>
+</div>
+</div>
+<div class="sheet" id="sheet">
+<div class="sheet-in">
+<h2>סיכום המשלוח</h2>
+<div class="meta" id="sMeta"></div>
+<div class="sumlist" id="sList"></div>
+<div class="sumtot"><span>סה״כ פריטים</span><span id="sTot">0</span></div>
+<div class="sheet-actions">
+<button type="button" class="b-out" id="back">חזרה לעריכה</button>
+<button type="button" class="b-solid" id="send">שליחה</button>
+</div>
+</div>
+</div>
+<script src="a.js"></script>
+</body>
+</html>

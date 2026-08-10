@@ -45,8 +45,9 @@ var T = {
 function $(id){ return document.getElementById(id); }
 function qp(n){ var m = new RegExp("[?&]"+n+"=([^&]*)").exec(location.search); return m ? decodeURIComponent(m[1]) : ""; }
 
-var key = (qp("s") || "kasba").toLowerCase();
-var CFG = SUPPLIERS[key] || SUPPLIERS.kasba;
+var key = qp("s").toLowerCase();
+var KNOWN = !!SUPPLIERS[key];
+var CFG = SUPPLIERS[key] || { name:"", type:"", group:"", lang:"en" };
 var L = T[CFG.lang];
 
 document.documentElement.lang = CFG.lang;
@@ -83,3 +84,11 @@ $("lDoneT").textContent   = L.doneT;
 $("lDoneP").textContent   = L.doneP;
 $("again").textContent    = L.again;
 
+if(!KNOWN){
+  $("app").style.display = "none";
+  $("bar").style.display = "none";
+  var w = document.createElement("div");
+  w.className = "ns";
+  w.textContent = "Please open the personal link that was sent to you. · אנא פתחו את הקישור האישי שנשלח אליכם.";
+  document.body.appendChild(w);
+}

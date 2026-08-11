@@ -121,7 +121,7 @@ function applyLang(code){
 
 /* Language switch — shown only for suppliers that have an alternative language. */
 var langEl = $("lang");
-if(KNOWN && CFG.alt && T[CFG.alt]){
+if(KNOWN && CFG.alt && T[CFG.alt] && langEl && langEl.getElementsByTagName("button").length === 2){
   var btns = langEl.getElementsByTagName("button");
   btns[0].textContent = CFG.lang.toUpperCase();
   btns[1].textContent = CFG.alt.toUpperCase();

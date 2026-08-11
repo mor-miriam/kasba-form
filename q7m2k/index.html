@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<base href="../">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Shipment Declaration · MIRIAM</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Archivo:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="s1.css"><link rel="stylesheet" href="s2.css">
+</head>
+<body>
+<noscript><div class="ns">Please open this link in your phone browser (Chrome / Safari).</div></noscript>
+<div class="head">
+<div class="logo-text"><span class="l1">MIRIAM</span><span class="l2">House of Design</span></div>
+<h1 id="tTitle"></h1>
+<div class="sup" id="tSup"></div>
+</div>
+<div id="app">
+<div class="wrap">
+<div class="card">
+<div class="grid2">
+<div>
+<label for="date" id="lDate"></label>
+<input type="date" id="date">
+</div>
+<div>
+<label for="boxes" id="lBoxes"></label>
+<input type="number" id="boxes" min="0" step="1" inputmode="numeric">
+</div>
+</div>
+</div>
+<div class="entry">
+<div class="lbl" id="lAdd"></div>
+<input type="text" id="what" autocomplete="off" enterkeyhint="done">
+<div class="qtyrow">
+<span class="t" id="lQty"></span>
+<div class="stepper">
+<button type="button" id="minus">&minus;</button>
+<input type="number" id="qty" value="1" min="1" step="1" inputmode="numeric">
+<button type="button" id="plus">+</button>
+</div>
+</div>
+<button type="button" class="more" id="moreBtn"></button>
+<div class="extra" id="extra">
+<input type="text" id="box" autocomplete="off">
+<input type="text" id="note" autocomplete="off">
+</div>
+<button type="button" class="addbtn" id="add"></button>
+</div>
+<div id="msg" class="msg"></div>
+<div class="listhead">
+<h2 id="lList"></h2>
+<span id="cnt"></span>
+</div>
+<div class="list" id="list"></div>
+<div class="empty" id="empty"></div>
+<div class="card" style="margin-top:20px">
+<h2 id="lPhoto"></h2>
+<div class="hint" id="hPhoto"></div>
+<label class="filebox" for="photo"><span id="lPhotoBtn"></span>
+<input type="file" id="photo" accept="image/*" multiple></label>
+<div class="thumbs" id="thumbs"></div>
+</div>
+<div class="card">
+<h2 id="lNotes"></h2>
+<div class="hint" id="hNotes"></div>
+<textarea id="notes"></textarea>
+</div>
+<div class="foot">MIRIAM House of Design</div>
+</div>
+</div>
+<div class="done" id="done">
+<div class="tick">&#10003;</div>
+<h2 id="lDoneT"></h2>
+<p id="lDoneP"></p>
+<button type="button" id="again"></button>
+</div>
+<div class="bar" id="bar">
+<div class="bar-in">
+<div class="totals"><b id="tItems">0</b> <span id="lItems"></span><br><span id="tLines"></span></div>
+<button type="button" class="go" id="review" disabled></button>
+</div>
+</div>
+<div class="sheet" id="sheet">
+<div class="sheet-in">
+<h2 id="lSum"></h2>
+<div class="meta" id="sMeta"></div>
+<div class="sumlist" id="sList"></div>
+<div class="sumtot"><span id="lTot"></span><span id="sTot">0</span></div>
+<div class="sheet-actions">
+<button type="button" class="b-out" id="back"></button>
+<button type="button" class="b-solid" id="send"></button>
+</div>
+</div>
+</div>
+<script>window.SUP="q7m2k";</script>
+<script src="a1.js"></script>
+<script src="a2.js"></script>
+</body>
+</html>

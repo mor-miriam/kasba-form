@@ -7,6 +7,15 @@ var SUPPLIERS = {
   coulisse: { name: "Coulisse",     type: "ייבוא", group: "group_mm5z66cy", lang: "en" }
 };
 
+/* Opaque per-supplier codes used in the public links (no supplier name in the URL).
+   Must stay in sync with CODES in build.py. */
+var CODES = {
+  q7m2k: "kasba",
+  v4kdz: "nyi",
+  h8rnp: "oba",
+  t5xwb: "coulisse"
+};
+
 var T = {
   he: {
     title:"הצהרת משלוח", date:"תאריך המשלוח", boxes:"כמה ארגזים סה״כ", boxesPh:"למשל 4",
@@ -45,7 +54,10 @@ var T = {
 function $(id){ return document.getElementById(id); }
 function qp(n){ var m = new RegExp("[?&]"+n+"=([^&]*)").exec(location.search); return m ? decodeURIComponent(m[1]) : ""; }
 
-var key = qp("s").toLowerCase();
+/* Supplier can arrive as: window.SUP (set by the /<code>/ folder page),
+   ?s=<code>, or the legacy ?s=<supplier-name> link. */
+var raw = (window.SUP || qp("s") || "").toLowerCase();
+var key = CODES[raw] || raw;
 var KNOWN = !!SUPPLIERS[key];
 var CFG = SUPPLIERS[key] || { name:"", type:"", group:"", lang:"en" };
 var L = T[CFG.lang];

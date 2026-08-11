@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Archivo:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="s1.css"><link rel="stylesheet" href="s2.css">
+<style>
+[hidden]{display:none!important}
+.lang{margin-top:12px;display:flex;gap:6px;justify-content:center}
+.lang button{background:none;border:0;border-bottom:1px solid transparent;padding:3px 7px;font-family:inherit;font-size:11px;letter-spacing:.16em;color:#a39a94;cursor:pointer}
+.lang button.on{color:#000;border-bottom-color:#000}
+</style>
 </head>
 <body>
 <noscript><div class="ns">Please open this link in your phone browser (Chrome / Safari).</div></noscript>
@@ -17,6 +23,7 @@
 <div class="logo-text"><span class="l1">MIRIAM</span><span class="l2">House of Design</span></div>
 <h1 id="tTitle"></h1>
 <div class="sup" id="tSup"></div>
+<div class="lang" id="lang" hidden><button type="button"></button><button type="button"></button></div>
 </div>
 <div id="app">
 <div class="wrap">
